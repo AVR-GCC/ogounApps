@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/infermerentry"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bar.infermaferm.ScrollActivity"
+    android:background="#BBCC">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:background="#668088">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/picHolder"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="name:"
+        android:id="@+id/nameLabel"
+        android:textSize="16dp"
+        android:layout_below="@+id/picHolder"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="address:"
+        android:id="@+id/addressLabel"
+        android:textSize="16dp"
+        android:layout_below="@+id/infermaname"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="distance:"
+        android:id="@+id/distLabel"
+        android:textSize="16dp"
+        android:layout_below="@+id/addressLabel"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="infermaname"
+        android:id="@+id/infermaname"
+        android:textSize="16dp"
+        android:layout_alignTop="@+id/nameLabel"
+        android:layout_toRightOf="@+id/addressLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="infermaddress"
+        android:id="@+id/infermaddress"
+        android:layout_alignTop="@+id/addressLabel"
+        android:layout_toRightOf="@+id/distLabel"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="infermadistance"
+        android:id="@+id/infermadistance"
+        android:textSize="16dp"
+        android:layout_alignTop="@+id/distLabel"
+        android:layout_toRightOf="@+id/distLabel" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="infermaryId"
+        android:textSize="7dp"
+        android:visibility="invisible" />
+    </RelativeLayout>
+</LinearLayout>

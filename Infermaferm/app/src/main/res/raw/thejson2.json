@@ -1,0 +1,50 @@
+[
+  {
+    "name":"polar_infermary_for_clubed_seels",
+    "phone":"24242424242",
+    "long":"1",
+    "lat":"1",
+    "pic":"http://www.picgifs.com/clip-art/cartoons/bugs-bunny/clip-art-bugs-bunny-314834.jpg",
+    "notes":"open_only_in_summer"
+  },
+  {
+    "name":"the_other_infermary",
+    "phone":"42424242424",
+    "address":"far from any poles",
+    "long":"32",
+    "lat":"64",
+    "pic":"http://images.all-free-download.com/images/graphiclarge/bee_clip_art_18782.jpg",
+    "notes":"is_different_from_the_polar_infermery"},
+  {
+    "name":"yet_another_infermary",
+    "phone":"55555",
+    "address":"far from any poles",
+    "long":"34.84490873",
+    "lat":"32.27353",
+    "pic":"http://images.clipartpanda.com/clip-art-dT6yGKET9.jpeg",
+    "notes":"is_different_from_the_polar_infermery"},
+  {
+    "name":"the_extra_infermary",
+    "phone":"11111111111111",
+    "address":"far from any poles",
+    "long":"-31.3",
+    "lat":"110.1",
+    "pic":"http://images.clipartpanda.com/penguin-clip-art-aiq5zAqiM.png",
+    "notes":"is_additional"},
+  {
+    "name":"the last infermery",
+    "phone":"999999999",
+    "address":"far from any poles",
+    "long":"-1.1",
+    "lat":"58.9",
+    "pic":"http://images.clipartpanda.com/tiger-clip-art-Tiger-clipart-images.jpg",
+    "notes":"is_different_from_the_polar_infermery"},
+  {
+    "name":"sorry one more",
+    "phone":"77777",
+    "address":"far from any poles",
+    "long":"171.6",
+    "lat":"-27.3",
+    "pic":"cbspic",
+    "notes":"is_different_from_the_polar_infermery"}
+]
