@@ -68,6 +68,8 @@ public class ScrollActivity extends AppCompatActivity {
     private static ScrollView sv;
     private static LinearLayout ll;
     private static int ii;
+    private static int smInitialized;
+
 
     protected void onStart() {
         super.onStart();
@@ -76,7 +78,7 @@ public class ScrollActivity extends AppCompatActivity {
         String ca = (String) me.getStringExtra("callingActivity");
         System.out.println("in on start'11134412111111111111111111");
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if(ca.equals("MainActivity") || ca.equals("FilterActivity")) {
+        if((ca.equals("MainActivity") || ca.equals("FilterActivity")) && smInitialized != 1) {
             InfermeryNode temp = Infermarray;
             int i = 1;
             while (temp != null) {
@@ -91,6 +93,7 @@ public class ScrollActivity extends AppCompatActivity {
                 }
 
             }
+            smInitialized = 1;
             i = 0;
             temp = Infermarray;
             if (temp == null) System.out.println("temp is null!!!");
@@ -123,11 +126,11 @@ public class ScrollActivity extends AppCompatActivity {
             lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new LocationListener() {
                 @Override
                 public void onLocationChanged(Location location) {
-                    if ((Math.abs(mylong - location.getLongitude()) > 0.01) || (Math.abs(mylat - location.getLatitude()) > 0.01)) {
+                    //if ((Math.abs(mylong - location.getLongitude()) > 0.01) || (Math.abs(mylat - location.getLatitude()) > 0.01)) {
                         mylong = location.getLongitude();
                         mylat = location.getLatitude();
                         System.out.println("location updated to: longetute: " + mylong + " latitude: " + mylat);
-                    }
+                    //}
                 }
 
                 @Override
@@ -157,8 +160,10 @@ public class ScrollActivity extends AppCompatActivity {
                 //return;
             }
             Location curloc = lm.getLastKnownLocation(lm.GPS_PROVIDER);
-            mylong = curloc.getLongitude();
-            mylat = curloc.getLatitude();
+            if (curloc != null) {
+                mylong = curloc.getLongitude();
+                mylat = curloc.getLatitude();
+            }
 
             System.out.println("location set to: longetute: " + mylong + " latitude: " + mylat);
             while (temp != null) {
@@ -261,6 +266,7 @@ public class ScrollActivity extends AppCompatActivity {
         wraper = (CoordinatorLayout) inflater.inflate(R.layout.scroll_holder, null);
         sv = (ScrollView) wraper.getChildAt(1);
         ll = (LinearLayout) sv.getChildAt(0);
+        smInitialized = 0;
         setContentView(wraper);
 
     }
